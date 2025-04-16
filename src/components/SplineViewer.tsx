@@ -31,13 +31,8 @@ export default function SplineViewer({
         if (loadingRef.current) {
           loadingRef.current.style.display = "none";
         }
-
-        // Adjust camera and rendering for background use
         if (app.interface) {
-          // These are optional and depend on the specific scene
-          // They may not all work depending on the scene format
           try {
-            // Disable orbit controls for background use
             if (app.interface.enableOrbitControls) {
               app.interface.enableOrbitControls(false);
             }
