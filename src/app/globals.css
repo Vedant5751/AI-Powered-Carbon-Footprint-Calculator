@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Softer light mode with natural tones */
+    --background: 60 30% 96%; /* Soft cream background */
+    --foreground: 146 30% 20%; /* Dark green text */
+    --card: 60 30% 98%; /* Lighter cream for cards */
+    --card-foreground: 146 30% 20%; /* Dark green text */
+    --popover: 60 30% 98%; /* Matching card background */
+    --popover-foreground: 146 30% 20%; /* Dark green text */
+    --primary: 142 76% 36%; /* Green primary */
+    --primary-foreground: 0 0% 100%; /* White on primary */
+    --secondary: 90 25% 90%; /* Light sage secondary */
+    --secondary-foreground: 146 30% 20%; /* Dark green on secondary */
+    --muted: 60 20% 90%; /* Muted cream */
+    --muted-foreground: 146 20% 32%; /* Muted green text */
+    --accent: 142 30% 90%; /* Light green accent */
+    --accent-foreground: 146 40% 20%; /* Dark green on accent */
+    --destructive: 0 70% 60%; /* Softer red */
+    --destructive-foreground: 0 0% 100%; /* White on destructive */
+    --border: 146 20% 85%; /* Light green border */
+    --input: 146 20% 85%; /* Light green input */
+    --ring: 142 76% 36%; /* Green ring */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Earthy dark mode instead of harsh black */
+    --background: 146 25% 12%; /* Dark green background */
+    --foreground: 60 30% 92%; /* Warm off-white text */
+    --card: 146 20% 15%; /* Slightly lighter green cards */
+    --card-foreground: 60 30% 92%; /* Warm off-white text */
+    --popover: 146 20% 15%; /* Matching card background */
+    --popover-foreground: 60 30% 92%; /* Warm off-white text */
+    --primary: 142 70% 45%; /* Brighter green primary */
+    --primary-foreground: 0 0% 100%; /* White on primary */
+    --secondary: 146 15% 25%; /* Darker sage secondary */
+    --secondary-foreground: 60 30% 92%; /* Warm off-white on secondary */
+    --muted: 146 20% 20%; /* Muted green background */
+    --muted-foreground: 60 20% 80%; /* Muted cream text */
+    --accent: 142 20% 25%; /* Dark green accent */
+    --accent-foreground: 60 30% 92%; /* Warm off-white on accent */
+    --destructive: 0 65% 40%; /* Deeper red */
+    --destructive-foreground: 0 85% 97%; /* Light on destructive */
+    --border: 146 20% 25%; /* Dark green border */
+    --input: 146 20% 25%; /* Dark green input */
+    --ring: 142 70% 45%; /* Matching primary */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
