@@ -25,22 +25,18 @@ export default function RootLayout({
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if on mobile device
   useEffect(() => {
     const checkMobile = () => {
       const mobile = window.innerWidth < 768;
       setIsMobile(mobile);
     };
 
-    // Initial check
     checkMobile();
 
-    // Add resize listener
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Listen for sidebar collapse events
   useEffect(() => {
     const handleSidebarChange = (e: CustomEvent) => {
       setSidebarCollapsed(e.detail.collapsed);
@@ -94,7 +90,6 @@ export default function RootLayout({
 
             {(isRootPage || isLoginPage) && <Footer />}
 
-            {/* Add chat bubble only on protected pages */}
             {!isRootPage && !isLoginPage && <ChatBubble />}
           </div>
         </Providers>
